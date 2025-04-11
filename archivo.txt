@@ -1,0 +1,28 @@
+En la terminal me posiciono en la ruta, por ejemplo documents y la carpeta react_talento_tech. Creo una carpeta clase1 con mkdir clase1. Puedo crear un archivo.txt con type nul>archivo.txt (crea un archivo vacio) Luego me posiciono en clase1 y hago npm create vite@latest my_project y sigo con la seleccion de React, Js o Ts.
+Para borrar utilizo rd /s /q nombredeldirectorio, y lo hace pelota!
+Si quiero borrar solo un archivo: del nombre del archivo ,con su extension.
+Los modificadores /s, sirve para borrar todos los archivos y subcarpetas de un dir. Si el dir esta vacio no es necesario ponerlo.
+El modificador /q, no te pide confirmacion para borrar, se llama borrado silencioso, y es directo.
+Como se pedia hacer algo con JS puro creo soloJS
+
+Instalacion de TAILWIND:
+En la terminal del proyecto (en cada carpeta )
+npm install -D tailwindcss postcss autoprefixer
+si quiero una version especifica como la 3.4.17 seria asi
+npm install -D tailwindcss@3.4.17 postcss autoprefixer
+
+luego 
+npx tailwindcss init -p
+luego en en archivo tailwind config.js copiar en content:[
+    "index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+]
+En App.css, borro todo lo que trae el vite y agrego solo esto:
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+y para sacar errores, voy a la configuracion de vsc, Ctrl+Shift+p , "preferences: open settings json" y en css lint agrego esta linea "css.validate":false y listo!
+
+Para el proyecto de soloJS, sin react, es mas practico importar en el head el cdn
+<link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> y ya funciona directamente, pero no puedo por ejemplo modificar el config, por ejemplo para agregar mas breaks, o algun color personalizado, etc
+Para proyectos con react, el cdn no funciona, hay que instalarlo con npm etc.
